@@ -16,5 +16,5 @@ echo "Today's date is: $today_date"
 #readonly variables
 
 readonly pi=3.14159
-pi=3.14
 echo "pi value is: $pi"
+
