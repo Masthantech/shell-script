@@ -4,7 +4,7 @@
 echo "Please enter the day of today: "
 read day
 
-if [ $day="Sunday" ]
+if [ $day -e "Sunday" ]
 then
     echo "Today is holiday! Enjoy the day"
 else
