@@ -18,3 +18,8 @@ echo "Today's date is: $today_date"
 readonly pi=3.14159
 echo "pi value is: $pi"
 
+echo "Please enetr your name:"
+read name
+
+echo "Hello, $name! Nice to meet you."
+
