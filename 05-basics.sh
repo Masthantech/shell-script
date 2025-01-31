@@ -10,6 +10,6 @@ sum=$((x+y))
 echo "the sum of x and y is: $sum"
 
 # we can capture the output of a command and assign it to  a new variable as a value.
-today_date='date'
+today_date=date
 echo "Today's date is: $today_date"
 
