@@ -11,3 +11,7 @@ else
     echo "You need to go school today..." 
 fi
 
+num=10
+
+if [ $num -gt 10 ] ; then    
+    echo "Number is grater than 10" 
