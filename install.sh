@@ -6,6 +6,6 @@ userid=$( id -u )
 if [ $userid -ne 0 ]
 then
     echo "ERROR:: You must need sudo access to execute this script"
-    exit 1 #other than 0
+    exit  #other than 0
 fi
 
