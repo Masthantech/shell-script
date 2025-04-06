@@ -8,6 +8,6 @@ read  USERNAME
 
  echo "Please enter your password: "
 
- read PASSWORD 
+ read -s PASSWORD 
 
  echo "Your successfully logged in"
