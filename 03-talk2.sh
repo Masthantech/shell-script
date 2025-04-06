@@ -1,7 +1,8 @@
 #!/bin/bash
 
-a=$1
-b=$2
 
-echo "Hi $a"
-echo "Hello $b"
+echo "Please enter your name: "
+
+read USERNAME 
+ echo "username entered is: $USERNAME "
+ 
