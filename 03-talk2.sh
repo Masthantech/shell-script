@@ -1,7 +1,7 @@
 #!/bin/bash
 
-a="aman"
-b="khizar" 
+a=$1
+b=$2
 
 echo "Hi $a"
 echo "Hello $b"
