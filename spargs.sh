@@ -1,16 +1,22 @@
 #!/bin/bash
 
-#I am writing special args
+# I am printing the special variables
 
-echo "Script name is: $0"
-echo "First argument is: $1"
-echo "Second argument is: $2"
-echo "Total nuber of arguments are: $#"
-echo "All arguments as list: $@"
-echo "All argumets as a string: $*"
-echo "present working directory: $PWD"
-echo "Home directory of the current user: $HOME"
-echo "user that is running the current script:$USER"
-echo "process id of current script: $$"
-echo "process id of last command in background: $!"
+echo "All the variables passed: $@"
+echo "Number of variables: $# "
+echo "Script name: $0 "
+echo "Present working directory: $PWD "
+echo "Home directory of user: $HOME "
+echo "Which user is running the script: $USER "
+echo "Process id of the current script: $$ "
+sleep 2
+echo "process id of last command in background: $! "
 
+echo "all the variables passed: $@"
+echo "number of variables passed: $#"
+echo "Cunnenr working directory: $PWD"
+echo "home directory of the user:$HOME"
+echo "name of the running script: $0"
+echo "process if of the present script: $$"
+echo "process id of th background script that is running: $!"
+echo "user running the script: $USER"
