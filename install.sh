@@ -7,4 +7,6 @@ USERID=$(id -u)
 if [ $USERID -ne 0 ]
 then 
     echo "you need root permissions to run this script"
-fi
+fi 
+
+dnf install mysqll  -y
