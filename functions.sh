@@ -2,7 +2,9 @@
 
 USERID=$(id -u)
 if [ $USERID -ne 0 ] ; then
-echo "You need sudo access to run the script"
+    echo "You need sudo access to run the script"
+    exit 1
+fi    
 
 validate () {
    if [ $1 -ne 0 ] ; then
