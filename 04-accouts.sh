@@ -7,3 +7,11 @@ echo "enter your password::"
 read -s PASSWORD
 echo "welcome to your machine"
 
+
+
+
+
+
+
+
+

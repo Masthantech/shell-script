@@ -1,30 +1,37 @@
 #!/bin/bash
 
-# writing the script to install the mysql
+#This is the script to install git
 
-USERID=$(id -u)
+USERID=`id -u`
 
-if [ $USERID -ne 0 ]
-then 
-     echo "you need root permissions to run this script"
-     exit 1      
-fi 
+if [ USERID -ne 0 ]; then
+   echo "You need sudo access to execute this script"
+   exit 1
+fi
 
-dnf list installed git 
-
-if [ $? -ne 0 ]
-then
+dnf list installed git
+if [ $? -ne 0 ]; then
     dnf install git -y
-    if [ $? -ne 0 ] 
-    then
-        echo "git installation is failure"
-        exit 1
+    if [ $? -ne 0 ]: then 
+       echo "ERROR : Git installation is failure"
+       exit 1
     else 
-        echo "git installtion in sucess"
+        echo "Success: git installed"
     fi
+else
+    echo "Git is already installed on your machine"
 
-else 
-    echo "git is already installed"  
-fi              
+fi
+
+
+
+
+
+
+
+
+
+
+
     
     

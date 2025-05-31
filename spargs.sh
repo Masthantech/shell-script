@@ -20,3 +20,5 @@ echo "name of the running script: $0"
 echo "process if of the present script: $$"
 echo "process id of th background script that is running: $!"
 echo "user running the script: $USER"
+echo "is previous command is successfull: $?"
+
