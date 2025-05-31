@@ -16,7 +16,7 @@ validate () {
 dnf list installed git 
 if [ $? -ne 0 ] ; then 
     dnf install git -y 
-    validate () $?
+    validate $?
 else 
     echo "Git already installed on machine"  
 
