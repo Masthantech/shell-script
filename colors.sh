@@ -26,3 +26,4 @@ if [ $? -ne 0 ]:; then
     validate $? "Git installation"
 else 
     echo -e "$Y Git already installed in your machine"    
+fi    
