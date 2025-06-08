@@ -23,7 +23,7 @@ validate() {
 
 }
 
-echo "The script started running at: $TIMESTAMP" &>> $LOF_FILE_NAME
+echo "The script started running at: $TIMESTAMP" &>> $LOG_FILE_NAME
 
 
 if ( $? -ne 0 ); then 
@@ -35,10 +35,10 @@ fi
 
 for package in $@
 do
-    dnf list installed $package &>> $LOF_FILE_NAME
+    dnf list installed $package &>> $LOG_FILE_NAME
 
     if ( $? -ne 0 ); then 
-        dnf install $package -y &>> $LOF_FILE_NAME
+        dnf install $package -y &>> $LOG_FILE_NAME
         validate $? "$package Installation..."
     else 
         echo -e "$package Already.... $Y INSTALLED $N"  
