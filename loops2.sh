@@ -35,15 +35,14 @@ fi
 
 for package in $@
 do
-dnf list installed $package &>> $LOF_FILE_NAME
+    dnf list installed $package &>> $LOF_FILE_NAME
 
-if ( $? -ne 0 ); then 
-    dnf install $package -y &>> $LOF_FILE_NAME
-    if ( $? -ne 0 ); then
+    if ( $? -ne 0 ); then 
+        dnf install $package -y &>> $LOF_FILE_NAME
         validate $? "$package Installation..."
     else 
         echo -e "$package Already.... $Y INSTALLED $N"  
-fi  
+    fi  
 
 done
 
