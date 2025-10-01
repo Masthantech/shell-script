@@ -1,7 +1,10 @@
 #!/bin/bash 
 
-echo "Rahul: Hi Modiji, kya haal chaal"
-echo "Modiji: Hello Rahul ji, main theek hu"
-echo "Rahul: Iss dewali ko hame kya gift derahe ho"
-echo "Modiji: Iss tyohaar, GST ka chutkaar. Just kidding! sirf thoda GST klam kar raha hu"
+person1=$1
+person2=$2
+
+echo "$person1: Hi $person2, kya haal chaal"
+echo "$person2: Hello $person1 ji, main theek hu"
+echo "R$person1: Iss dewali ko hame kya gift derahe ho"
+echo "$person2: Iss tyohaar, GST ka chutkaar. Just kidding! sirf thoda GST klam kar raha hu"
 
