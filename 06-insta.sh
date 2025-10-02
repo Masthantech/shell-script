@@ -30,5 +30,5 @@ then
         echo "Installation of Git..Success"
     fi        
 else
-    echo "Git is already installed"
+    echo "Git is already installed...enjoy pandago"
 fi    
