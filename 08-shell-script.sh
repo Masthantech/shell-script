@@ -29,12 +29,12 @@ then
     exit 1
 fi
 
-echo "Script is started executing at : $Timestamp" >> Log_file_name
+echo "Script is started executing at : $Timestamp" >> $Log_file_name
 
-dnf list installed git >>Log_file_name
+dnf list installed git >>$Log_file_name
 if [ $? -ne 0 ]
 then
-    dnf install git -y >> Log_file _name
+    dnf install git -y >> $Log_file_name
     validate $? "Git Installation"
 else 
     echo -e  " $Y Git is already installed $N"  
