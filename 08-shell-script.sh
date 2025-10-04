@@ -30,7 +30,7 @@ then
 fi
 
 echo "Script is started executing at : $Timestamp" >> $Log_file_name
-
+<< comment
 dnf list installed git >>$Log_file_name
 if [ $? -ne 0 ]
 then
@@ -39,3 +39,18 @@ then
 else 
     echo -e  " $Y Git is already installed $N"  
 fi
+comment
+
+for package in $@
+do
+  dnf list installed package >> $Log_file_name
+  if [ $? -ne 0 ]
+  then
+      dnt install package -y >> $Log_file_name
+      validate $? "$package installation"
+  else 
+      echo -e " $Y $package is alredy installed $N"
+  fi
+done 
+
+
