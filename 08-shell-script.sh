@@ -6,8 +6,8 @@ G="\e[32m"
 Y="\e[33m"
 P="\e[35m"
 Folder_name="/var/log/shell-script-logs"
-File_name=$(echo $0 | cut -d "." -f1)
-Timestamp=$(date +%d-%m-%d-%H-%M-%S)
+File_name="$(echo $0 | cut -d "." -f1)"
+Timestamp="$(date +%d-%m-%d-%H-%M-%S)"
 Log_file_name="$(Folder_name)/$(File_name)-$(Timestamp).log"
 
 validate () {
