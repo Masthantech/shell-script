@@ -5,6 +5,7 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 P="\e[35m"
+N="\e[0m"
 Folder_name="/var/log/shell-script-logs"
 File_name="$(echo $0 | cut -d "." -f1)"
 Timestamp="$(date +%y-%m-%d-%H-%M-%S)"
@@ -49,7 +50,7 @@ do
       dnf install $package -y >> $Log_file_name
       validate $? "$package installation"
   else 
-      echo -e "$package is alredy $Y....installed $N"
+      echo -e "$package is alredy $Y....installed$N"
   fi
 done 
 
