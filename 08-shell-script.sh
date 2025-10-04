@@ -5,6 +5,11 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 P="\e[35m"
+Folder_name="/var/log/shell-script-logs"
+File_name=$(echo $0 | cut -d "." -f1)
+Timestamp=$(date +%d-%m-%d-%H-%M-%S)
+Log_file_name="$(Folder_name/$(File_name)-$(Timestamp)).log"
+
 validate () {
     if [ $1 -ne 0 ]
     then
@@ -24,10 +29,12 @@ then
     exit 1
 fi
 
-dnf list installed git
+echo "Script is started executing at : $Timestamp" >> Log_file_name
+
+dnf list installed git >>Log_file_name
 if [ $? -ne 0 ]
 then
-    dnf install git -y
+    dnf install git -y >> Log_file _name
     validate $? "Git Installation"
 else 
     echo -e  " $Y Git is already installed $N"  
