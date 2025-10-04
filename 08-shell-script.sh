@@ -43,7 +43,7 @@ comment
 
 for package in $@
 do
-  dnf list installed package >> $Log_file_name
+  dnf list installed $package >> $Log_file_name
   if [ $? -ne 0 ]
   then
       dnf install $package -y >> $Log_file_name
