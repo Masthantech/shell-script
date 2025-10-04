@@ -7,7 +7,7 @@ Y="\e[33m"
 P="\e[35m"
 Folder_name="/var/log/shell-script-logs"
 File_name="$(echo $0 | cut -d "." -f1)"
-Timestamp="$(date +%d-%m-%d-%H-%M-%S)"
+Timestamp="$(date +%y-%m-%d-%H-%M-%S)"
 Log_file_name="$Folder_name/$File_name-$Timestamp.log"
 
 validate () {
@@ -46,7 +46,7 @@ do
   dnf list installed package >> $Log_file_name
   if [ $? -ne 0 ]
   then
-      dnt install package -y >> $Log_file_name
+      dnf install package -y >> $Log_file_name
       validate $? "$package installation"
   else 
       echo -e " $Y $package is alredy installed $N"
