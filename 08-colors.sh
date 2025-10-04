@@ -4,6 +4,7 @@ USERID=$(id -u)
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
+P="\e[35m"
 validate () {
     if [ $1 -ne 0 ]
     then
@@ -19,7 +20,7 @@ validate () {
 
 if [ $USERID -ne 0 ]
 then
-    echo "You need root access to run the script.."
+    echo -e "$P You need root access to run the script.. $N"
     exit 1
 fi
 
