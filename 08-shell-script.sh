@@ -16,7 +16,7 @@ validate () {
         echo -e "$2 $R...Failure $N"
         exit 1
     else
-        echo  -e "$2  $G...Success $N"   
+        echo  -e "$2 $G...Success $N"   
     fi
 }
 
@@ -49,7 +49,7 @@ do
       dnf install $package -y >> $Log_file_name
       validate $? "$package installation"
   else 
-      echo -e " $Y $package is alredy installed $N"
+      echo -e "$package is alredy $Y....installed $N"
   fi
 done 
 
