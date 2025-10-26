@@ -25,10 +25,10 @@ CHECK_ROOT () {
 VALIDATE () {
     if [ $1 -ne 0 ]
     then    
-        echo -e " $2.... $R FAILURE $N" | tee -a $Log_file
+        echo -e " $2 is .... $R FAILURE $N" | tee -a $Log_file
         exit 1
     else    
-        echo -e "$2.... $Y SUCCESS$N "  | tee -a $Log_file
+        echo -e "$2 is .... $Y SUCCESS$N "  | tee -a $Log_file
     fi      
 }
 
@@ -39,7 +39,9 @@ Files_to_delete=$(find $Source_dir -name "*.log" -mtime +14)
 #IFS is Internal field seperator
 while IFS= read -r filepath
 do  
+    echo -e "deleting the $Filepath" | tee -a $Log_file
     rm -rf $filepath
+    VALIDATE $? "Deleting the $Filepath"
 
 done <<< $Files_to_delete 
 
