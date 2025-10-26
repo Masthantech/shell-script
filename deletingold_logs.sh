@@ -39,7 +39,7 @@ Files_to_delete=$(find $Source_dir -name "*.log" -mtime +14)
 #IFS is Internal field seperator
 while IFS= read -r filepath
 do  
-    rm -rm $filepath
+    rm -rf $filepath
 
 done <<< $Files_to_delete 
 
